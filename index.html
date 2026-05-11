@@ -795,6 +795,12 @@ body.preview-mobile .experience-shell {
   text-transform: uppercase;
 }
 
+.footer-link {
+  color: rgba(201, 168, 76, 0.56);
+  text-decoration: none;
+  transition: color 0.28s ease;
+}
+
 #lbox {
   position: fixed;
   inset: 0;
@@ -968,6 +974,10 @@ body.preview-mobile .experience-shell {
   .lbox-close:hover {
     background: rgba(201, 168, 76, 0.08);
     border-color: rgba(232, 204, 122, 0.58);
+  }
+
+  .footer-link:hover {
+    color: var(--gold-2);
   }
 }
 
@@ -1161,6 +1171,14 @@ body.preview-mobile .experience-shell {
             </div>
             <div id="menuLayout" class="menu-layout"></div>
           </div>
+          <footer class="footer" data-reveal>
+            <div class="footer-brand">Matcha Project</div>
+            <div class="footer-line"></div>
+            <div class="footer-tag">Designed by Harshit</div>
+            <div class="footer-tag">
+              <a class="footer-link" href="https://www.linkedin.com/in/saiharshitdasari" target="_blank" rel="noopener noreferrer">LinkedIn Profile</a>
+            </div>
+          </footer>
         </div>
       </div>
     </section>
