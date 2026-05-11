@@ -38,9 +38,8 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
   background:
-    radial-gradient(circle at 20% 10%, rgba(74, 124, 89, 0.18), transparent 30%),
-    radial-gradient(circle at 88% 22%, rgba(201, 168, 76, 0.12), transparent 26%),
-    linear-gradient(180deg, #0a100b 0%, #080f0a 40%, #070d09 100%);
+    radial-gradient(circle at 50% 0%, rgba(74, 124, 89, 0.1), transparent 34%),
+    linear-gradient(180deg, #0a100b 0%, #080f0a 46%, #070d09 100%);
   color: var(--cream);
   font-family: "Zen Kaku Gothic New", sans-serif;
   -webkit-text-size-adjust: 100%;
@@ -181,10 +180,14 @@ button {
 }
 
 .preview-switch[data-mode="desktop"]::after {
-  transform: translateX(100%);
+  transform: translateX(0);
 }
 
 .preview-switch[data-mode="wide"]::after {
+  transform: translateX(100%);
+}
+
+.preview-switch[data-mode="mobile"]::after {
   transform: translateX(200%);
 }
 
@@ -437,8 +440,8 @@ body.preview-wide .experience-shell {
   font-family: "Cormorant Garamond", serif;
   font-size: clamp(1rem, 0.92rem + 0.32vw, 1.18rem);
   font-style: italic;
-  letter-spacing: 0.08em;
-  line-height: 1.55;
+  letter-spacing: 0.12em;
+  line-height: 1.6;
   text-wrap: balance;
 }
 
@@ -447,11 +450,13 @@ body.preview-wide .experience-shell {
   color: rgba(201, 168, 76, 0.54);
   font-family: "Shippori Mincho", serif;
   font-size: 0.54rem;
-  letter-spacing: 0.32em;
+  letter-spacing: 0.28em;
   text-transform: uppercase;
 }
 
 .menu-section {
+  position: relative;
+  z-index: 3;
   display: flex;
   flex-direction: column;
   gap: 14px;
