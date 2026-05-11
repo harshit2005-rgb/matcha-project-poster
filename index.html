@@ -328,6 +328,12 @@ body.preview-mobile .experience-shell {
 #page {
   position: relative;
   z-index: 3;
+  min-height: 100%;
+}
+
+.shell-inner {
+  position: relative;
+  z-index: 3;
   display: flex;
   flex-direction: column;
   min-height: 100%;
@@ -450,12 +456,24 @@ body.preview-mobile .experience-shell {
   text-transform: uppercase;
 }
 
+.hero-founders::before {
+  content: "";
+  display: block;
+  width: 46px;
+  height: 0.5px;
+  margin: 0 auto 12px;
+  background: linear-gradient(90deg, transparent, rgba(201, 168, 76, 0.5), transparent);
+}
+
 .menu-section {
   position: relative;
   z-index: 3;
   display: flex;
   flex-direction: column;
   gap: 14px;
+  width: 100%;
+  max-width: min(100%, 1180px);
+  margin-inline: auto;
 }
 
 .section-head {
@@ -903,7 +921,7 @@ body.preview-mobile .experience-shell {
 }
 
 @container shell (min-width: 36rem) {
-  #page {
+  .shell-inner {
     gap: 38px;
   }
 
@@ -970,7 +988,7 @@ body.preview-mobile .experience-shell {
     letter-spacing: 0.18em;
   }
 
-  #page {
+  .shell-inner {
     padding-top: 82px;
   }
 
@@ -1114,16 +1132,6 @@ body.preview-mobile .experience-shell {
   </div>
 
   <div id="page">
-    <div class="hero" data-reveal>
-      <div class="hero-eyebrow">Art of Matcha</div>
-      <div class="hero-logo">MATCHA<em>Project</em></div>
-      <div class="hero-ornament"><span></span><i></i><span></span></div>
-      <div class="hero-sub">Japanese · Pure · Crafted</div>
-      <div class="hero-tag">Freshly whisked · Ceremonial grade · Made to order</div>
-      <p class="hero-copy">Crafted in silence. Served with soul.</p>
-      <div class="hero-founders">Crafted by Akhila and Harshit</div>
-    </div>
-
     <div class="preview-dock" data-reveal>
       <span class="preview-dock__label">Preview</span>
       <div class="preview-switch" id="previewSwitch" data-mode="desktop" role="group" aria-label="Preview mode">
@@ -1137,11 +1145,22 @@ body.preview-mobile .experience-shell {
         <canvas id="bgc"></canvas>
         <canvas id="ptc"></canvas>
         <div class="vig"></div>
-        <div class="menu-section">
-          <div class="section-head" data-reveal>
-            <div class="section-head-text">Our Menu</div>
+        <div class="shell-inner">
+          <div class="hero" data-reveal>
+            <div class="hero-eyebrow">Art of Matcha</div>
+            <div class="hero-logo">MATCHA<em>Project</em></div>
+            <div class="hero-ornament"><span></span><i></i><span></span></div>
+            <div class="hero-sub">Japanese · Pure · Crafted</div>
+            <div class="hero-tag">Freshly whisked · Ceremonial grade · Made to order</div>
+            <p class="hero-copy">Crafted in silence. Served with soul.</p>
+            <div class="hero-founders">Crafted by Akhila and Harshit</div>
           </div>
-          <div id="menuLayout" class="menu-layout"></div>
+          <div class="menu-section">
+            <div class="section-head" data-reveal>
+              <div class="section-head-text">Our Menu</div>
+            </div>
+            <div id="menuLayout" class="menu-layout"></div>
+          </div>
         </div>
       </div>
     </section>
